@@ -1,0 +1,124 @@
+.formulaire{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #formulaire-ensemble{
+        position: relative;
+        width: 600px;
+
+        background-color:$color2;
+        border-radius: 35px 35px 0 0;
+        .header-form{
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: $color3 ;
+            border-radius: 30px 30px 0 0;
+            img{
+                height: 200px;
+            }
+            h1{
+                font-family: bellotabold;
+                font-size: 5rem;
+                color: $color2;
+            }
+        }
+        .body-form{
+            max-width: 400px;
+            margin: auto;
+            padding: 20px 0;
+            #signup{
+                .form-field {
+                    margin-bottom: 5px;
+                    &.error input, &.error select, &.error textarea{
+                        border-color: $error;
+                    }
+                    &.success input, &.success select,&.success textarea{
+                        border-color: $success;
+                    }
+                    label{
+                        font-family: bellotabold;
+                        display: block;
+                        color: $color1;
+                        margin-bottom: 5px;
+                        font-size: 2rem;
+                    }
+                    input, select, textarea {
+                        border: solid 2px $color3a;
+                        border-radius: 3px;
+                        padding: 10px;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                        display: block;
+                        width: 100%;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    select{
+                        padding: 5px 10px;
+                    }
+                    small {
+                        margin-left: 1rem;
+                        font-family: 'bellotaitalic';
+                        font-size: 1.5rem;
+                        display: block;
+                        color: $error;
+                    }
+                    
+                    .btn {
+                        width: 100%;
+                        padding: 3%;
+                        background: $color1;
+                        border: none;
+                        color: $color2;
+                        text-transform: uppercase;
+                        margin-top:3rem;
+                        font-size: 2rem;
+                        transition: 1s;
+                        &:hover {
+                            transition: 0.6s;
+                            background: #085155;
+                            cursor: pointer;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                .gender {
+                    p{
+                        font-family: bellotabold;
+                        display: block;
+                        color: $color1;
+                        margin-bottom: 5px;
+                        font-size: 2rem;
+                    }
+                    label{
+                        font-family: bellotaregular;
+                        display: unset;
+                        color: unset;
+                        font-size: 1.4rem;
+                        margin-right: 3rem;
+                    }
+                    input{
+                        border: unset;
+                        border-radius: unset;
+                        padding: unset;
+                        margin-bottom: unset;
+                        font-size: unset;
+                        display:unset;
+                        width: unset;
+                        display: unset;
+                        margin: 0 1rem;
+                    }
+                    
+                }
+            }
+        
+        }
+    }
+}
