@@ -11,6 +11,25 @@ Fait le 22/03/2021 à BeCode.
 - php
 
 <details close>
+  <summary> The Missions objectives :</summary>
+
+At the end of this challenge you should have improved your:
+
+- *semantical* HTML
+- *accessibility* in HTML
+- Sass
+- Framework CSS or not (bootstrap, bulma, tailwind, ............. )
+- Progressive enhancement
+- PHP programming
+- Project planning
+- Mock-up creation
+
+You should also be able to :
+
+- display errors
+
+</details>
+<details close>
   <summary> The mission :</summary>
 
 
