@@ -81,14 +81,4 @@ Fait le 22/03/2021 à BeCode.
   content (obligatory field, valid email, etc...), ending by an email sent and a
   feedback for the user.
 
-  ### Resources
-
-  - [error message](http://uxmas.com/2012/the-4-hs-of-writing-error-messages)
-  - [class mailer](https://github.com/PHPMailer/PHPMailer)
-
-  ### Links
-
-  - [Honey](https://www.thryv.com/blog/honeypot-technique/)
-  - [Ajax](https://www.javatpoint.com/ajax-tutorial)
-  - [phpr](http://php.net/manual/en/function.print-r.php)
 </details>
