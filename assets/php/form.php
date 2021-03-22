@@ -2,16 +2,16 @@
     include 'contry.php';
 ?>
 
-<form id="signup" class="form">
+<form id="signup" class="form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <div class="form-field">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" autocomplete="off">
-        <small></small>
+        <small><?php echo $nameErr; ?></small>
     </div>
     <div class="form-field">
         <label for="lastname">Lastname:</label>
         <input type="text" name="lastname" id="lastname" autocomplete="off">
-        <small></small>
+        <small><?php echo $lastnameErr; ?></small>
     </div>
     <div class="form-field gender">
         <p>Gender:</p>
@@ -26,14 +26,13 @@
         name="gender" value="other">
         <label for="gender3">Other</label>
 
-        <small></small>
+        <small><?php echo $genderErr; ?></small>
     </div>
-    <!-- gender -->
 
     <div class="form-field">
         <label for="email">Email:</label>
         <input type="text" name="email" id="email" autocomplete="off">
-        <small></small>
+        <small><?php echo $emailErr; ?></small>
     </div>
 
     <div class="form-field">
@@ -46,7 +45,7 @@
             }
             ?>
         </select>
-        <small></small>
+        <small><?php echo $countryErr; ?></small>
     </div>
 
 
@@ -58,14 +57,13 @@
             <option value="problem">Problem ?</option>
             <option value="other">Other ?</option>
         </select>
-        <small></small>
+        <small><?php echo $subjectErr; ?></small>
     </div>
 
     <div class="form-field">
         <label for="textarea">Your message:</label>
-        <textarea name="textarea" id="textarea" rows="5">
-        </textarea>
-        <small></small>
+        <textarea name="textarea" id="textarea" rows="5"></textarea>
+        <small><?php echo $textareaErr; ?></small>
     </div>
     <div class="form-field">
         <input type="submit" value="Sign Up" class="btn">

@@ -8,7 +8,7 @@
     <title>form</title>
 </head>
 <body>
-
+    <?php include './assets/php/form-validation.php' ?>
     <section class="formulaire">
         <div id="formulaire-ensemble">
             <div class="header-form">
@@ -16,11 +16,9 @@
             <h1> Contact US</h1>
             </div>
             <div class="body-form">
-                <?php include 'form.php' ?>
+                <?php include './assets/php/form.php' ?>
             </div>
-        
         </div>
-    
     </section>
     <script src="./assets/js/index.js"></script>
 </body>

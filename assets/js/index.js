@@ -179,13 +179,13 @@ form.addEventListener('submit', function (e) {
 
     // submit to the server if the form is valid
     if (isFormValid) {
-
+        form.submit();
     }
 });
 
 
 // add some delay before checking
-const debounce = (fn, delay = 1000) => {
+const debounce = (fn, delay = 500) => {
     let timeoutId;
     return (...args) => {
         // cancel the previous timer
@@ -223,3 +223,41 @@ form.addEventListener('input', debounce(function (e) {
             break;
     }
 }));
+
+
+// const checkPassword = () => {
+
+//     let valid = false;
+
+//     const password = passwordEl.value.trim();
+
+//     if (!isRequired(password)) {
+//         showError(passwordEl, 'Password cannot be blank.');
+//     } else if (!isPasswordSecure(password)) {
+//         showError(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+//     } else {
+//         showSuccess(passwordEl);
+//         valid = true;
+//     }
+
+//     return valid;
+// };
+
+
+// const checkConfirmPassword = () => {
+//     let valid = false;
+//     // check confirm password
+//     const confirmPassword = confirmPasswordEl.value.trim();
+//     const password = passwordEl.value.trim();
+
+//     if (!isRequired(confirmPassword)) {
+//         showError(confirmPasswordEl, 'Please enter the password again');
+//     } else if (password !== confirmPassword) {
+//         showError(confirmPasswordEl, 'Confirm password does not match');
+//     } else {
+//         showSuccess(confirmPasswordEl);
+//         valid = true;
+//     }
+
+//     return valid;
+// };
