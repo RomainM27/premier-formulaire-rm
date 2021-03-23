@@ -13,7 +13,7 @@
     <section class="formulaire">
         <div id="formulaire-ensemble">
             <div class="header-form">
-            <img src="./assets/img/hackers-poulette-logo.png" alt="hackers-poulette-logo">
+            <img src="./assets/img/hackers-poulette-logo.png" alt="hackers-poulette-logo" draggable="false">
             <h1> Contact US</h1>
             </div>
             <div class="body-form">

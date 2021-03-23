@@ -81,6 +81,10 @@ body {
 
 .formulaire #formulaire-ensemble .header-form img {
   height: 200px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .formulaire #formulaire-ensemble .header-form h1 {
