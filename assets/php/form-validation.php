@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // check if name only contains letters and whitespace  
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) {  
                 $nameErr = "Only alphabets and white space are allowed";  
-            }  
+            } 
             else if (!filter_var($name, FILTER_SANITIZE_STRING)) {  
                 $nameErr = "Invalid name format";  
             }  
@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Subject = $subject;
             $mail->Body    = "Name: $name $lastname $gender to :  $country <br>from: $email <br> The content:  $textarea";
             $mail -> send();
-            echo '<span class="message success">Message has been sent </span>';
+            echo '<span class="message successMess">Message has been sent </span>';
         } catch (Exception $e) {
             echo "<span class='message err'>Message could not be sent. Mailer Error: {$mail->ErrorInfo} </span>";
         }
@@ -133,7 +133,7 @@ function input_data($data) {
     return $data;  
 }  
 
-?>  
+?> 
 
 
 <!-- 
