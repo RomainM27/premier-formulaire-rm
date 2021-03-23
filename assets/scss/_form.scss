@@ -122,6 +122,25 @@
         }
     }
 }
+@media (max-width: 500px) {
+    #formulaire-ensemble{
+        width: 100% !important;
+    }
+    .body-form {
+        padding: 1rem !important;
+    }
+    .header-form{
+        flex-direction: column;
+        h1{
+            margin-bottom: 2rem;
+        }
+        img{
+            height: unset !important;
+            width: 100%;
+        }
+    }
+
+}
 
 
 .message{

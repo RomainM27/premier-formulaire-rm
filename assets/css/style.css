@@ -193,6 +193,28 @@ body {
   margin: 0 1rem;
 }
 
+@media (max-width: 500px) {
+  #formulaire-ensemble {
+    width: 100% !important;
+  }
+  .body-form {
+    padding: 1rem !important;
+  }
+  .header-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-form h1 {
+    margin-bottom: 2rem;
+  }
+  .header-form img {
+    height: unset !important;
+    width: 100%;
+  }
+}
+
 .message {
   font-size: 3rem;
   font-style: italic;
