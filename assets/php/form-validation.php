@@ -1,4 +1,10 @@
 <?php  
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require './assets/php-mailer/Exception.php';
+require './assets/php-mailer/PHPMailer.php';
+require './assets/php-mailer/SMTP.php'; 
 
 // define variables to empty values  
 $nameErr = $lastnameErr = $genderErr = $emailErr = $countryErr = $subjectErr = $textareaErr = "";  
@@ -86,9 +92,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (empty($nameErr) && empty($lastnameErr) && empty($genderErr) && empty($emailErr) && empty($countryErr) && empty($subjectErr) && empty($textareaErr) ){
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
+        $mail = new PHPMailer();
+        try {
+            $mail->IsSMTP();
+            $mail->Mailer = "smtp";
+
+            $mail->SMTPDebug  = 0;  
+            $mail->SMTPAuth   = TRUE;
+            $mail->SMTPSecure = "tls";
+            $mail->Port       = 587;
+            $mail->Host       = "smtp.gmail.com";
+            $mail->Username   = "itraspberry147@gmail.com";
+            $mail->Password   = "123becode";
+
+            $mail->AddAddress("itraspberry147@gmail.com", "Zack");
+            $mail->SetFrom("$email", "$name $lastname");
+            
+            $mail->IsHTML(true);
+            $mail->Subject = $subject;
+            $mail->Body    = "Name: $name $lastname $gender to :  $country <br>from: $email <br> The content:  $textarea";
+            $mail -> send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
     }
 }  
 
