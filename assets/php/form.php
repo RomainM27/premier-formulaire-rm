@@ -6,6 +6,7 @@
     <div class="form-field">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" autocomplete="off">
+        <input type="text" name="honey" id="honeyPot" autocomplete="off">
         <small><?php echo $nameErr; ?></small>
     </div>
     <div class="form-field">

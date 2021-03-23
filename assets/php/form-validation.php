@@ -11,7 +11,13 @@ $nameErr = $lastnameErr = $genderErr = $emailErr = $countryErr = $subjectErr = $
 $name = $lastname = $gender = $email = $country = $subject = $textarea ="";  
 
 //Input fields validation  
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
+    if (isset($_POST["honey"]) && $_POST["honey"] != "") {
+        echo "BOOOOOOOOOOOOOOOOOOOOT SPOTED";
+        die();
+    }
 
     //name string Validation  
     if (empty($_POST["name"])) {  
@@ -112,9 +118,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Subject = $subject;
             $mail->Body    = "Name: $name $lastname $gender to :  $country <br>from: $email <br> The content:  $textarea";
             $mail -> send();
-            echo 'Message has been sent';
+            echo '<span class="message success">Message has been sent </span>';
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            echo "<span class='message err'>Message could not be sent. Mailer Error: {$mail->ErrorInfo} </span>";
         }
     }
 }  

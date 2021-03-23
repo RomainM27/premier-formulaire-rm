@@ -64,7 +64,7 @@ body {
   position: relative;
   width: 600px;
   background-color: #FFF;
-  border-radius: 35px 35px 0 0;
+  border-radius: 35px 35px 10px 10px;
 }
 
 .formulaire #formulaire-ensemble .header-form {
@@ -148,7 +148,7 @@ body {
   border: none;
   color: #FFF;
   text-transform: uppercase;
-  margin-top: 3rem;
+  margin: 3rem 0;
   font-size: 2rem;
   -webkit-transition: 1s;
   transition: 1s;
@@ -191,5 +191,31 @@ body {
   width: unset;
   display: unset;
   margin: 0 1rem;
+}
+
+.message {
+  font-size: 3rem;
+  font-style: italic;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.success {
+  color: #0cf803;
+  background-color: #d1ffc5;
+}
+
+.err {
+  color: #f84803;
+  background-color: #ffc9c5;
+}
+
+#honeyPot {
+  display: none !important;
 }
 /*# sourceMappingURL=style.css.map */
