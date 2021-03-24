@@ -66,7 +66,8 @@
         <textarea name="textarea" id="textarea" rows="5"></textarea>
         <small><?php echo $textareaErr; ?></small>
     </div>
-    <div class="form-field">
-        <input type="submit" value="Sign Up" class="btn">
-    </div>
+    <!-- <div class="form-field">
+        <input id="send" type="submit" value="Sign Up" class="btn">
+    </div> -->
+    <button type="submit" id="send" name="send" class="btn btn-primary">Submit</button>
 </form>

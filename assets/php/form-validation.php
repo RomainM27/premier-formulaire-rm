@@ -14,113 +14,117 @@ $name = $lastname = $gender = $email = $country = $subject = $textarea ="";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    if (isset($_POST["honey"]) && $_POST["honey"] != "") {
-        echo "BOOOOOOOOOOOOOOOOOOOOT SPOTED";
-        die();
-    }
-
-    //name string Validation  
-    if (empty($_POST["name"])) {  
-        $nameErr = "Name is required";  
-    } else {  
-        $name = input_data($_POST["name"]);  
-            // check if name only contains letters and whitespace  
-            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {  
-                $nameErr = "Only alphabets and white space are allowed";  
-            } 
-            else if (!filter_var($name, FILTER_SANITIZE_STRING)) {  
-                $nameErr = "Invalid name format";  
-            }  
-    }  
-
-    //lastname string Validation 
-    if (empty($_POST["lastname"])) {  
-        $lastnameErr = "Lastname is required";  
-    } else {  
-        $lastname = input_data($_POST["lastname"]);  
-            // check if name only contains letters and whitespace  
-            if (!preg_match("/^[a-zA-Z ]*$/",$lastname)) {  
-                $lastnameErr = "Only alphabets and white space are allowed";  
-            }  
-            else if (!filter_var($lastname, FILTER_SANITIZE_STRING)) {  
-                $lastnameErr = "Invalid lastname format";  
-            }  
-    } 
-    
-    //gender Validation 
-    if (empty($_POST["gender"])) {  
-        $genderErr = "Gender is required";  
-    } else {  
-        $gender = input_data($_POST["gender"]);  
-        if (!filter_var($gender, FILTER_SANITIZE_STRING)) {  
-            $genderErr = "Invalid gender";  
-        }  
-    } 
-
-    //Email Validation   
-    if (empty($_POST["email"])) {  
-        $emailErr = "Email is required";  
-    } else {  
-        $email = input_data($_POST["email"]);  
-        // check that the e-mail address is well-formed  
-        if (!filter_var($email, FILTER_SANITIZE_EMAIL)) {  
-            $emailErr = "Invalid email format";  
+    var_dump($_POST);
+    if(isset($_POST['send']) && !empty($_POST['send'])){ 
+        var_dump($_POST);
+        if (isset($_POST["honey"]) && $_POST["honey"] != "") {
+            echo "BOOOOOOOOOOOOOOOOOOOOT SPOTED";
+            die();
         }
-    }  
-    
-    //country Validation  
-    if (empty($_POST['country'])){  
-        $countryErr = "Choose one contry.";  
-    } else {  
-        $country = input_data($_POST["country"]);  
-        if (!filter_var($country, FILTER_SANITIZE_STRING)) {  
-            $countryErr = "Invalid country";  
+
+        //name string Validation  
+        if (empty($_POST["name"])) {  
+            $nameErr = "Name is required";  
+        } else {  
+            $name = input_data($_POST["name"]);  
+                // check if name only contains letters and whitespace  
+                if (!preg_match("/^[a-zA-Z ]*$/",$name)) {  
+                    $nameErr = "Only alphabets and white space are allowed";  
+                } 
+                else if (!filter_var($name, FILTER_SANITIZE_STRING)) {  
+                    $nameErr = "Invalid name format";  
+                }  
         }  
-    }
-    //subject Validatio
-    if (empty($_POST['subject'])){  
-        $subjectErr = "Choose one subject.";  
-    } else {  
-        $subject = input_data($_POST["subject"]);  
-        if (!filter_var($subject, FILTER_SANITIZE_STRING)) {  
-            $subjectErr = "Invalid subject";  
+
+        //lastname string Validation 
+        if (empty($_POST["lastname"])) {  
+            $lastnameErr = "Lastname is required";  
+        } else {  
+            $lastname = input_data($_POST["lastname"]);  
+                // check if name only contains letters and whitespace  
+                if (!preg_match("/^[a-zA-Z ]*$/",$lastname)) {  
+                    $lastnameErr = "Only alphabets and white space are allowed";  
+                }  
+                else if (!filter_var($lastname, FILTER_SANITIZE_STRING)) {  
+                    $lastnameErr = "Invalid lastname format";  
+                }  
+        } 
+        
+        //gender Validation 
+        if (empty($_POST["gender"])) {  
+            $genderErr = "Gender is required";  
+        } else {  
+            $gender = input_data($_POST["gender"]);  
+            if (!filter_var($gender, FILTER_SANITIZE_STRING)) {  
+                $genderErr = "Invalid gender";  
+            }  
+        } 
+
+        //Email Validation   
+        if (empty($_POST["email"])) {  
+            $emailErr = "Email is required";  
+        } else {  
+            $email = input_data($_POST["email"]);  
+            // check that the e-mail address is well-formed  
+            if (!filter_var($email, FILTER_SANITIZE_EMAIL)) {  
+                $emailErr = "Invalid email format";  
+            }
         }  
-    }  
-
-
-    if(empty($_POST["textarea"])){
-        $textareaErr = "Please enter your comment.";     
-    } else{
-        $textarea = input_data($_POST["textarea"]);
-        if (!filter_var($textarea, FILTER_SANITIZE_STRING)) {  
-            $textareaErr = "Invalid textarea";  
+        
+        //country Validation  
+        if (empty($_POST['country'])){  
+            $countryErr = "Choose one contry.";  
+        } else {  
+            $country = input_data($_POST["country"]);  
+            if (!filter_var($country, FILTER_SANITIZE_STRING)) {  
+                $countryErr = "Invalid country";  
+            }  
+        }
+        //subject Validatio
+        if (empty($_POST['subject'])){  
+            $subjectErr = "Choose one subject.";  
+        } else {  
+            $subject = input_data($_POST["subject"]);  
+            if (!filter_var($subject, FILTER_SANITIZE_STRING)) {  
+                $subjectErr = "Invalid subject";  
+            }  
         }  
-    }
 
-    if (empty($nameErr) && empty($lastnameErr) && empty($genderErr) && empty($emailErr) && empty($countryErr) && empty($subjectErr) && empty($textareaErr) ){
-        $mail = new PHPMailer();
-        try {
-            $mail->IsSMTP();
-            $mail->Mailer = "smtp";
 
-            $mail->SMTPDebug  = 0;  
-            $mail->SMTPAuth   = TRUE;
-            $mail->SMTPSecure = "tls";
-            $mail->Port       = 587;
-            $mail->Host       = "smtp.gmail.com";
-            $mail->Username   = "itraspberry147@gmail.com";
-            $mail->Password   = "123becode";
+        if(empty($_POST["textarea"])){
+            $textareaErr = "Please enter your comment.";     
+        } else{
+            $textarea = input_data($_POST["textarea"]);
+            if (!filter_var($textarea, FILTER_SANITIZE_STRING)) {  
+                $textareaErr = "Invalid textarea";  
+            }  
+        }
 
-            $mail->AddAddress("itraspberry147@gmail.com", "Zack");
-            $mail->SetFrom("$email", "$name $lastname");
-            
-            $mail->IsHTML(true);
-            $mail->Subject = $subject;
-            $mail->Body    = "Name: $name $lastname $gender to :  $country <br>from: $email <br> The content:  $textarea";
-            $mail -> send();
-            echo '<span class="message successMess">Message has been sent </span>';
-        } catch (Exception $e) {
-            echo "<span class='message err'>Message could not be sent. Mailer Error: {$mail->ErrorInfo} </span>";
+        if (empty($nameErr) && empty($lastnameErr) && empty($genderErr) && empty($emailErr) && empty($countryErr) && empty($subjectErr) && empty($textareaErr) ){
+            $mail = new PHPMailer();
+            try {
+                $mail->IsSMTP();
+                $mail->Mailer = "smtp";
+
+                $mail->SMTPDebug  = 0;  
+                $mail->SMTPAuth   = TRUE;
+                $mail->SMTPSecure = "tls";
+                $mail->Port       = 587;
+                $mail->Host       = "smtp.gmail.com";
+                $mail->Username   = "itraspberry147@gmail.com";
+                $mail->Password   = "123becode";
+
+                $mail->AddAddress("itraspberry147@gmail.com", "Zack");
+                $mail->SetFrom("$email", "$name $lastname");
+                
+                $mail->IsHTML(true);
+                $mail->Subject = $subject;
+                $mail->Body    = "Name: $name $lastname $gender to :  $country <br>from: $email <br> The content:  $textarea";
+                $mail -> send();
+                echo '<span class="message successMess">Message has been sent </span>';
+            } catch (Exception $e) {
+                echo "<span class='message err'>Message could not be sent. Mailer Error: {$mail->ErrorInfo} </span>";
+            }
         }
     }
 }  
