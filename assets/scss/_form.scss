@@ -32,7 +32,8 @@
             margin: auto;
             padding: 20px 0;
             #signup{
-                .btn {
+                #send {
+                    border-radius: 10px;
                     width: 100%;
                     padding: 3%;
                     background: $color1;
@@ -122,6 +123,8 @@
         }
     }
 }
+
+
 @media (max-width: 500px) {
     #formulaire-ensemble{
         width: 100% !important;

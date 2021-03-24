@@ -15,8 +15,8 @@ $name = $lastname = $gender = $email = $country = $subject = $textarea ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
     // var_dump($_POST);
-    if(isset($_POST['send'])){ 
-        var_dump($_POST);
+    // if(isset($_POST['send'])){ 
+    //     var_dump($_POST);
         if (isset($_POST["honey"]) && $_POST["honey"] != "") {
             echo "BOOOOOOOOOOOOOOOOOOOOT SPOTED";
             die();
@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "<span class='message err'>Message could not be sent. Mailer Error: {$mail->ErrorInfo} </span>";
             }
         }
-    }
+    //}
 }  
 
 // help to secure

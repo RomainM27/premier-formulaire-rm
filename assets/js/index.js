@@ -201,7 +201,6 @@ const debounce = (fn, delay = 500) => {
 
 // add an ionstant feedback
 form.addEventListener('input', debounce(function (e) {
-    console.log(e.target.id);
     switch (e.target.id) {
         case 'name':
             checkName();

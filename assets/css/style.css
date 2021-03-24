@@ -99,7 +99,8 @@ body {
   padding: 20px 0;
 }
 
-.formulaire #formulaire-ensemble .body-form #signup .btn {
+.formulaire #formulaire-ensemble .body-form #signup #send {
+  border-radius: 10px;
   width: 100%;
   padding: 3%;
   background: #0d8187;
@@ -112,14 +113,14 @@ body {
   transition: 1s;
 }
 
-.formulaire #formulaire-ensemble .body-form #signup .btn:hover {
+.formulaire #formulaire-ensemble .body-form #signup #send:hover {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   background: #085155;
   cursor: pointer;
 }
 
-.formulaire #formulaire-ensemble .body-form #signup .btn:focus {
+.formulaire #formulaire-ensemble .body-form #signup #send:focus {
   outline: none;
 }
 

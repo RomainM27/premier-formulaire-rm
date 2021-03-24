@@ -24,7 +24,6 @@
     <script src="./assets/js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script>
-    console.log(screen.width);
     gsap.from(".message",{
         x:-1000,
         duration: 2,
