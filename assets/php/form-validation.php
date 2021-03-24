@@ -14,8 +14,8 @@ $name = $lastname = $gender = $email = $country = $subject = $textarea ="";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    var_dump($_POST);
-    if(isset($_POST['send']) && !empty($_POST['send'])){ 
+    // var_dump($_POST);
+    if(isset($_POST['send'])){ 
         var_dump($_POST);
         if (isset($_POST["honey"]) && $_POST["honey"] != "") {
             echo "BOOOOOOOOOOOOOOOOOOOOT SPOTED";

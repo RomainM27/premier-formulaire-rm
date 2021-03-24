@@ -67,7 +67,7 @@
         <small><?php echo $textareaErr; ?></small>
     </div>
     <!-- <div class="form-field">
-        <input id="send" type="submit" value="Sign Up" class="btn">
+        <input id="send" name="send" type="submit" value="Sign Up" class="btn">
     </div> -->
-    <button type="submit" id="send" name="send" class="btn btn-primary">Submit</button>
+    <button type="submit" id="send" name="send" class="btn">Submit</button>
 </form>

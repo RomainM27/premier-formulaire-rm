@@ -99,6 +99,30 @@ body {
   padding: 20px 0;
 }
 
+.formulaire #formulaire-ensemble .body-form #signup .btn {
+  width: 100%;
+  padding: 3%;
+  background: #0d8187;
+  border: none;
+  color: #FFF;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  font-size: 2rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .btn:hover {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  background: #085155;
+  cursor: pointer;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .btn:focus {
+  outline: none;
+}
+
 .formulaire #formulaire-ensemble .body-form #signup .form-field {
   margin-bottom: 5px;
 }
@@ -143,30 +167,6 @@ body {
   font-size: 1.5rem;
   display: block;
   color: #eb7272;
-}
-
-.formulaire #formulaire-ensemble .body-form #signup .form-field .btn {
-  width: 100%;
-  padding: 3%;
-  background: #0d8187;
-  border: none;
-  color: #FFF;
-  text-transform: uppercase;
-  margin: 3rem 0;
-  font-size: 2rem;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.formulaire #formulaire-ensemble .body-form #signup .form-field .btn:hover {
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  background: #085155;
-  cursor: pointer;
-}
-
-.formulaire #formulaire-ensemble .body-form #signup .form-field .btn:focus {
-  outline: none;
 }
 
 .formulaire #formulaire-ensemble .body-form #signup .gender p {
