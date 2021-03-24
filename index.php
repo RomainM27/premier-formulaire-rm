@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Formulaire de hackers poulette, n'hésitez pas à nous contacter !">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>form</title>
+    <link rel="icon" href="./assets/img/hackers-poulette-logo.png" type="img/png" sizes="24x24">
+    <title>Hackers poulette</title>
 </head>
 <body>
     <?php include './assets/php/form-validation.php' ?>
