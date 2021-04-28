@@ -1,4 +1,248 @@
+@font-face {
+  font-family: 'bellotaregular';
+  src: url("../font/Bellota-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bellotabold';
+  src: url("../font/Bellota-Bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bellotaitalic';
+  src: url("../font/Bellota-Italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+  font-family: 'bellotaregular', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 90vw;
+  margin: 0 auto;
+}
+
 body {
-  background-color: #1c3636;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/kvistholt-photography-oZPwn40zCK4-unsplash-min.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.formulaire {
+  padding: 5rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formulaire #formulaire-ensemble {
+  position: relative;
+  width: 600px;
+  background-color: #FFF;
+  border-radius: 35px 35px 10px 10px;
+}
+
+.formulaire #formulaire-ensemble .header-form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #303030;
+  border-radius: 30px 30px 0 0;
+}
+
+.formulaire #formulaire-ensemble .header-form img {
+  height: 200px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.formulaire #formulaire-ensemble .header-form h1 {
+  font-family: bellotabold;
+  font-size: 5rem;
+  color: #FFF;
+}
+
+.formulaire #formulaire-ensemble .body-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup #send {
+  border-radius: 10px;
+  width: 100%;
+  padding: 3%;
+  background: #0d8187;
+  border: none;
+  color: #FFF;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  font-size: 2rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup #send:hover {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  background: #085155;
+  cursor: pointer;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup #send:focus {
+  outline: none;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field {
+  margin-bottom: 5px;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field.error input, .formulaire #formulaire-ensemble .body-form #signup .form-field.error select, .formulaire #formulaire-ensemble .body-form #signup .form-field.error textarea {
+  border-color: #eb7272;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field.success input, .formulaire #formulaire-ensemble .body-form #signup .form-field.success select, .formulaire #formulaire-ensemble .body-form #signup .form-field.success textarea {
+  border-color: #73ec73;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field label {
+  font-family: bellotabold;
+  display: block;
+  color: #0d8187;
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field input, .formulaire #formulaire-ensemble .body-form #signup .form-field select, .formulaire #formulaire-ensemble .body-form #signup .form-field textarea {
+  border: solid 2px #3030303d;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field input:focus, .formulaire #formulaire-ensemble .body-form #signup .form-field select:focus, .formulaire #formulaire-ensemble .body-form #signup .form-field textarea:focus {
+  outline: none;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field select {
+  padding: 5px 10px;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .form-field small {
+  margin-left: 1rem;
+  font-family: 'bellotaitalic';
+  font-size: 1.5rem;
+  display: block;
+  color: #eb7272;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .gender p {
+  font-family: bellotabold;
+  display: block;
+  color: #0d8187;
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .gender label {
+  font-family: bellotaregular;
+  display: unset;
+  color: unset;
+  font-size: 1.4rem;
+  margin-right: 3rem;
+}
+
+.formulaire #formulaire-ensemble .body-form #signup .gender input {
+  border: unset;
+  border-radius: unset;
+  padding: unset;
+  margin-bottom: unset;
+  font-size: unset;
+  display: unset;
+  width: unset;
+  display: unset;
+  margin: 0 1rem;
+}
+
+@media (max-width: 500px) {
+  #formulaire-ensemble {
+    width: 100% !important;
+  }
+  .body-form {
+    padding: 1rem !important;
+  }
+  .header-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-form h1 {
+    margin-bottom: 2rem;
+  }
+  .header-form img {
+    height: unset !important;
+    width: 100%;
+  }
+}
+
+.message {
+  font-size: 3rem;
+  font-style: italic;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.successMess {
+  color: #0cf803;
+  background-color: #d1ffc5;
+}
+
+.err {
+  color: #f84803;
+  background-color: #ffc9c5;
+}
+
+#honeyPot {
+  display: none !important;
 }
 /*# sourceMappingURL=style.css.map */

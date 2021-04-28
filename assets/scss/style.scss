@@ -1,4 +1,35 @@
-body{
-    background-color: rgb(28, 54, 54);
-    
+@import "font";
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'bellotaregular', sans-serif;
 }
+$color1 : #0d8187;
+$color2 : #FFF;
+$color3 : #303030;
+$color3a: #3030303d;
+$error: rgb(235, 114, 114);
+$success: rgb(115, 236, 115);
+
+html{
+    font-size: 62.5%;
+    height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/kvistholt-photography-oZPwn40zCK4-unsplash-min.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+@import "form";
